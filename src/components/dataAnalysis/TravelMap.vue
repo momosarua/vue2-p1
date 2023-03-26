@@ -127,6 +127,27 @@ export default {
                             brushType: "fill",
                         },
                     },
+                    // 关于地图中线路动画效果设置
+                    {
+                      type: "lines",
+                      zlevel: 2,
+                      effect: {
+                        show: true,
+                        period: 4,
+                        symbol: "arrow",
+                        symbolSize: 7,
+                        trailLength: 0.4
+                      },
+                      lineStyle: {
+                        normal: {
+                          color:"#1DE9B6",
+                          width: 1,
+                          opacity: 0.1,
+                          curveness: 0.3
+                        }
+                      },
+                      data: this.travelData.linesData
+                    }
                 ],
             };
             this.myChart.setOption(this.option);
